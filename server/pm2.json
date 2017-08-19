@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "overrall-fe",
+      "script": "server/index.js",
+      "instances": 4,
+      "exec_mode": "cluster_mode",
+      "out_file": "~/webroot/beatles/application/overrall/logs/out.log",
+      "error_file": "~/webroot/beatles/application/overrall/logs/error.log",
+      "merge_logs": true,
+      "env": {
+        "NODE_CONFIG_DIR": "./server/config",
+        "NODE_ENV": "dev"
+      },
+      "env_production": {
+        "NODE_CONFIG_DIR": "./server/config",
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
